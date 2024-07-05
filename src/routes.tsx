@@ -1,10 +1,12 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { PersonalInfo } from "./views/PersoanlInfo";
-import { Salary } from "./views/Salary";
-import { Summary } from "./views/Summary";
+import { createBrowserRouter } from "react-router-dom";
+import { PersonalInfo } from "./pages/PersoanlInfo";
+import { Salary } from "./pages/Salary";
+import { Summary } from "./pages/Summary";
+import { WelcomePage } from "./pages/Welcome";
 
 export const router = createBrowserRouter([
-  { path: "/", element: <PersonalInfo /> },
+  { path: "/", element: <WelcomePage /> },
+  { path: "/personal-info", element: <PersonalInfo /> },
   { path: "/summary", element: <Summary /> },
   { path: "/salary", element: <Salary /> },
 ]);

@@ -1,14 +1,26 @@
 interface CardProps {
-  title?: string;
-  children?: React.ReactNode;
-  actions?: React.ReactNode;
+  children: React.ReactNode;
 }
+const CardHeader: React.FC<CardProps> = ({ children }) => (
+  <header className="text-gray-500 font-semibold text-2xl">{children}</header>
+);
 
-export const Card: React.FC<CardProps> = ({ children, title }) => {
-  return (
-    <div className="flex flex-col gap-8 py-4 px-6 shadow-xl rounded-lg min-w-[660px]">
-      <h1 className="text-gray-500 font-semibold text-2xl">{title}</h1>
-      <div>{children}</div>
-    </div>
-  );
-};
+const CardBody: React.FC<CardProps> = ({ children }) => <div>{children}</div>;
+
+const CardActions: React.FC<CardProps> = ({ children }) => (
+  <footer className="flex justify-end">{children}</footer>
+);
+
+export const Card: React.FC<CardProps> & {
+  Header: typeof CardHeader;
+  Body: typeof CardBody;
+  Actions: typeof CardActions;
+} = ({ children }) => (
+  <div className="flex flex-col gap-8 py-4 px-6 shadow-xl rounded-lg min-w-[660px]">
+    {children}
+  </div>
+);
+
+Card.Header = CardHeader;
+Card.Body = CardBody;
+Card.Actions = CardActions;
