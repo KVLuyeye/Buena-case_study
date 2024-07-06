@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ProgressBar } from "primereact/progressbar";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
@@ -10,7 +9,7 @@ import { useProgressStore } from "./stores/progressStore";
 function App() {
   const [progress] = useProgressStore((state) => [state.progress]);
 
-  const valueTemplate = (value: number) => {
+  const valueTemplate = () => {
     return <></>;
   };
 

@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "../components/cards/Card";
 import { PageLayout } from "../layouts/defaultPage";
-import { PrimaryBtn } from "../components/buttons/PrimaryBtn";
 import { useNavigate } from "react-router-dom";
 import { useProgressStore } from "../stores/progressStore";
 import { useSalaryStore } from "../stores/salaryStore";
@@ -15,6 +14,7 @@ export const Salary = () => {
   const setSelectedSalary = useSalaryStore((state) => state.setSalary);
   const selectedSalary = useSalaryStore((state) => state.salary);
 
+  //FUNCTIONS
   const handleNext = () => {
     navigate("/summary");
     setProgress(66.6);
@@ -28,6 +28,12 @@ export const Salary = () => {
   const handleSalaryChange = (event: any) => {
     setSelectedSalary(event.target.value);
   };
+
+  //LIFECYCLE
+  useEffect(() => {
+    setSalarySelected(selectedSalary !== "");
+  }, [selectedSalary]);
+
   return (
     <PageLayout>
       <Card>
@@ -83,7 +89,7 @@ export const Salary = () => {
             }}
             variant="outlined"
             className="hover:opacity-80"
-            disabled={!selectedSalary}
+            disabled={!salarySelected}
           >
             {" "}
             Weiter
