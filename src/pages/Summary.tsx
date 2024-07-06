@@ -85,7 +85,7 @@ export const Summary = () => {
             disabled={salarySelected}
           >
             {" "}
-            Weiter
+            Fertigstellen
           </Button>
           <Button
             onClick={handleBack}
