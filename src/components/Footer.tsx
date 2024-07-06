@@ -11,8 +11,8 @@ export const Footer = () => {
         </div>
 
         {/* MIDDLE */}
-        <div className="flex flex-col md:flex-row md:space-x-16">
-          <ul className="space-y-2">
+        <div className="flex flex-col justify-center md:flex-row md:space-x-16">
+          <ul className="space-y-2 text-center">
             <li>
               <a href="#" className="text-gray-600">
                 Los geht's
@@ -29,7 +29,8 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-          <ul className="space-y-2">
+
+          <ul className="space-y-2 text-center">
             <li>
               <a href="#" className="text-gray-600">
                 Jobs

@@ -6,9 +6,12 @@ export const WelcomePage = () => {
 
   return (
     <>
-      <h1 className="text-center text-2xl">Welcome</h1>
+      <h1 className="text-center text-2xl">Willkommen bei Buena</h1>
       <div className="px-8 flex justify-center">
-        <PrimaryBtn onClick={() => navigate("/personal-info")} value="Next" />
+        <PrimaryBtn
+          onClick={() => navigate("/personal-info")}
+          value="Loslegen"
+        />
       </div>
     </>
   );

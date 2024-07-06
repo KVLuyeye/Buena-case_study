@@ -9,7 +9,6 @@ import { useProgressStore } from "./stores/progressStore";
 
 function App() {
   const [progress] = useProgressStore((state) => [state.progress]);
-  const setProgress = useProgressStore((state) => state.setProgress);
 
   const valueTemplate = (value: number) => {
     return <></>;
