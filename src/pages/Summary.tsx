@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card } from "../components/cards/Card";
 import { PageLayout } from "../layouts/defaultPage";
@@ -8,7 +7,6 @@ import { useSalaryStore } from "../stores/salaryStore";
 import Button from "@mui/joy/Button";
 
 export const Summary = () => {
-  const [salarySelected, setSalarySelected] = useState(false);
   const navigate = useNavigate();
   const setProgress = useProgressStore((state) => state.setProgress);
   const personalInfo = useFormStore((state) => state.form);
@@ -82,7 +80,6 @@ export const Summary = () => {
             }}
             variant="outlined"
             className="hover:opacity-80"
-            disabled={salarySelected}
           >
             {" "}
             Fertigstellen

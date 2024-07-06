@@ -60,7 +60,7 @@ export const Footer = () => {
             <li>
               <a href="#">Datenschutz & Impressum</a>
             </li>
-            <li>Buena © 2024</li>
+            <li>Buena - Case Study © 2024</li>
           </ul>
         </div>
       </div>

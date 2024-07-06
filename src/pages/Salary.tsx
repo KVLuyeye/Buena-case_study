@@ -9,6 +9,7 @@ import Radio from "@mui/joy/Radio";
 import Button from "@mui/joy/Button";
 
 export const Salary = () => {
+  const [salarySelected, setSalarySelected] = useState(false);
   const navigate = useNavigate();
   const setProgress = useProgressStore((state) => state.setProgress);
   const setSelectedSalary = useSalaryStore((state) => state.setSalary);
@@ -82,6 +83,7 @@ export const Salary = () => {
             }}
             variant="outlined"
             className="hover:opacity-80"
+            disabled={!selectedSalary}
           >
             {" "}
             Weiter

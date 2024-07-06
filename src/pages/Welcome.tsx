@@ -6,8 +6,7 @@ export const WelcomePage = () => {
 
   return (
     <section className="flex flex-col items-center gap-10">
-      <h1 className="text-center text-2xl">Willkommen bei Buena !</h1>
-      <h3 className="text-center text-md">
+      <h3 className="text-center text-xl">
         Hausverwaltung, wie sie sein sollte.
       </h3>
       <div className="text-center text-2xl max-w-[700px] px-2">
